@@ -55,15 +55,19 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    
+    {% block body %}
+      
+      <div class="container">
+          
+          <div class="row">
+            
+          </div>
+        
+      </div><!-- /.container -->
 
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Gestão de Planos de Ação</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
+     {% endblock body %}
+    
 
 
     <!-- Bootstrap core JavaScript

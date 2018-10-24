@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 from django.http import HttpResponse
 
 # Create your views here.
@@ -10,9 +11,9 @@ def nova_categoria(request):
         form = CategoriaForm(request.POST)
         if form.is_valid():
             form.save()
-            return HTTPResponse('Categoria adicionada com sucesso!')
+            return HttpResponse('Categoria adicionada com sucesso!')
         else:
-            print(forms.erros)
+            print(forms.errors)
     else:
         form = CategoriaForm()
     return render(request, 'tarefas/nova_categoria.html', {'form':form}) 
@@ -22,9 +23,9 @@ def nova_tarefa(request):
         form = TarefaForm(request.POST)
         if form.is_valid():
             form.save()
-            return HTTPResponse('Tarefa adicionada com sucesso!')
+            return HttpResponse('Tarefa adicionada com sucesso!')
         else:
-            print(forms.erros)
+            print(forms.errors)
     else:
         form = TarefaForm()
     return render(request, 'tarefas/nova_tarefa.html', {'form':form}) 
